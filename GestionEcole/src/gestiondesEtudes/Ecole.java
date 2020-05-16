@@ -42,7 +42,16 @@ public class Ecole implements Inscription{
 	String Newligne=System.getProperty("line.separator");
 	
 	public Ecole() {
-		
+		System.out.println("-Entrez le nom de l'école");
+		this.nomEcole=sc.nextLine();
+		System.out.println("-Entrez l'abreveation de l'école");
+		this.abrEcole=sc.nextLine();
+		System.out.println("-Entrez le fondateur de l'école");
+		this.fondateur=sc.nextLine();
+		System.out.println("-Entrez le type de l'école");
+		this.type=sc.nextLine();
+		System.out.println("-Entrez l'adresse de l'école");
+		this.adressEcole=sc.nextLine();
 	}
 	
 	public Ecole(String nomEcole, String abrEcole,String fondateur,String type, String adressEcole) {

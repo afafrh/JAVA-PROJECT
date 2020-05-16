@@ -14,17 +14,7 @@ public class Project {
 		
 		System.out.println("************************** BIENVENUE DANS LE SYSTEM ****************************" );
 		System.out.println("**************************       Mr.directeur         ****************************\n\n" );
-		System.out.println("-Entrez le nom de l'école");
-		String nomEcole=sc.nextLine();
-		System.out.println("-Entrez l'abreveation de l'école");
-		String abrEcole=sc.nextLine();
-		System.out.println("-Entrez le fondateur de l'école");
-		String fondateur=sc.nextLine();
-		System.out.println("-Entrez le type de l'école");
-		String type=sc.nextLine();
-		System.out.println("-Entrez l'adresse de l'école");
-		String adressEcole=sc.nextLine();
-		Ecole ecole=new Ecole(nomEcole, abrEcole,fondateur,type,adressEcole);
+		Ecole ecole=new Ecole();
 		System.out.println("--Veuillez entrer vos données personelles");
 		ecole.inscription();
 		ecole.addfilière();

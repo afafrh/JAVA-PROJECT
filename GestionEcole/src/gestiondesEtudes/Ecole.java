@@ -64,13 +64,13 @@ public class Ecole implements Inscription{
 		
 	}
 	public void inscription()   {//insc Admin
-		System.out.println("  ->Entez le nom :");
+		System.out.println("  ->Entez votre nom :");
 		String lastnamePers=sc.next();
-		System.out.println("  ->Entez le prénom :");
+		System.out.println("  ->Entez votre prénom :");
 		String firstnamePers=sc.next();
-		System.out.println("  ->Entrez le CNI :");
+		System.out.println("  ->Entrez votre CNI :");
 		String cniPers=sc.next();
-		System.out.println("  ->Entrez le mot de passe :");
+		System.out.println("  ->Entrez votre mot de passe :");
 		String pwd=sc.next();	
 		administrateur a= new administrateur(lastnamePers,firstnamePers,cniPers,pwd,this);
 		this.adminEcole.add(a);

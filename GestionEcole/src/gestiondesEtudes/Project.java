@@ -12,8 +12,8 @@ public class Project {
 		Scanner sc= new Scanner(System.in);
 		String Newligne=System.getProperty("line.separator");
 		
-		System.out.println("************************** BIENVENUE DANS LE SYSTEM ****************************" );
-		System.out.println("**************************       Mr.directeur         ****************************\n\n" );
+		System.out.println("************************** BIENVENUE DANS LE SYSTEME ****************************" );
+		System.out.println("**************************       Mr.Directeur         ****************************\n\n" );
 		System.out.println("-Entrez le nom de l'école");
 		String nomEcole=sc.nextLine();
 		System.out.println("-Entrez l'abréviation de l'école");
@@ -25,7 +25,7 @@ public class Project {
 		System.out.println("-Entrez l'adresse de l'école");
 		String adressEcole=sc.nextLine();
 		Ecole ecole=new Ecole(nomEcole, abrEcole,fondateur,type,adressEcole);
-		System.out.println("--Veuillez entrer vos données personelles");
+		System.out.println("--Veuillez entrer vos données personnelles");
 		ecole.inscription();
 		ecole.addfilière();
 		ecole.addclass();

@@ -19,7 +19,7 @@ public class Project {
 		ecole.inscription();
 		ecole.addfilière();
 		ecole.addclass();
-		System.out.println("\n la phase de la création l'école est terminée avec succès\n ");
+		System.out.println("\n la phase de la création de l'école est terminée avec succès\n ");
 		System.out.println("**************************BIENVENUE DANS LE SYSTEME "+ecole.abrEcole+"****************************\n\n" );
 		int id=0;
 		while (id==0) {//connection while(id==0)
@@ -187,20 +187,20 @@ public class Project {
 								}//stat sur la scolarité
 								if(ad2==3) {//stat sur les examen
 									
-								}//stat sur les examen
+								}//stat sur les examens
 								if(ad2==4) {//retour2
 									ad1=0;
 								}//retour2
-							}//menu les statistique et rapports
+							}//menu des statistique et rapports
 						}//les statistique et rapports
 						if(ad1==3) {//retour1
-							System.out.println("Merci pour votre visite.");
+							System.out.println("Merci de votre visite.");
 							id=0;
 						}//retour1
 					
 					}//menu d'administrateur
 					
-				}// passwd et l'existence verifié admin
+				}// passwd et l'existence verifiés admin
 			
 				
 				
@@ -217,7 +217,7 @@ public class Project {
 					
 					Respo resp =ecole.connectionRespo(nom, prenom, pwd);
 					if(resp.exist()==false) {//existences du respo connecte
-						System.out.println("Vous n'étes pas inscrit comme un responsable.");
+						System.out.println("Vous n'êtes pas inscrit comme un responsable.");
 						id=0;
 					}//existences du respo connecte
 					else if(resp.verificationPWD()==false) {//verifi pwd
@@ -227,7 +227,7 @@ public class Project {
 					else {//pwd o existence verifié
 						int r1=0;
 						while (r1==0) {//menu respo
-							System.out.println("--Choisir votre prochaine action:\n\n    1-Géstion des études\n    2-Géstion de scolarité\n    3-Retour\n");
+							System.out.println("--Choisir votre prochaine action:\n\n    1-Gestion des études\n    2-Gestion de scolarité\n    3-Retour\n");
 							try {//try 1
 								r1=sc.nextInt();	
 								if (r1!=1 && r1!=2 && r1!=3 ) {
@@ -244,7 +244,7 @@ public class Project {
 							if(r1==1) {//gestion des etudes
 								r1=0;
 								while (r1==0) {//MENU GESTION DES ETUDES
-									System.out.println("\nChoisir votre prochaine action:\n\n    1-Ajout des modules pour une classe\n    2-ajout d'element\n    3-Retirer un module\n    4-Retirer un élément\n    5-Gestion d'emploi\n    6-Afficher les données de la filière\n    7-Retour\n");
+									System.out.println("\nChoisir votre prochaine action:\n\n    1-Ajout des modules pour une classe\n    2-ajout d'élément\n    3-Retirer un module\n    4-Retirer un élément\n    5-Gestion d'emploi\n    6-Afficher les données de la filière\n    7-Retour\n");
 									try {//try 1
 										r1=sc.nextInt();	
 										if (r1!=1 && r1!=2 && r1!=3 && r1!=4&& r1!=5 && r1!=6 && r1!=7 && r1!=8) {
@@ -287,7 +287,7 @@ public class Project {
 										SimpleDateFormat s= new SimpleDateFormat("dd MM yyyy");
 										int r2=0;
 										while(r2==0) {
-											System.out.println("choisir votre prochaine action \n    1-creer un nouveau EDT\n    2-modifier un edt\n    3-retour");
+											System.out.println("choisir votre prochaine action \n    1-créer un nouveau EDT\n    2-modifier un edt\n    3-retour");
 											r2=sc.nextInt();
 											sc.nextLine();
 											
@@ -309,7 +309,7 @@ public class Project {
 													
 												}
 												else {
-													System.err.println("veullez saisir la date du debut de la semaine\n");
+													System.err.println("veuillez saisir la date du début de la semaine\n");
 													r2=1;
 												}
 												}
@@ -339,7 +339,7 @@ public class Project {
 									if(r1==6) {//Afficher les données
 										int r2=0;
 										while(r2==0) {//menu d'affichage
-											System.out.println("choisir votre prochaine action:\n    1-afficher les classes de la filière"+resp.filière.nomFilière+"\n    2-afficher les étudiants de la filière"+resp.filière.nomFilière+"\n    3-afficher les profs de la filière"+resp.filière.nomFilière+"\n    4-afficher les emploies d'une classe"+resp.filière.nomFilière+"\n    5-afficher les modules d'une classes"+resp.filière.nomFilière+"\n    6-afficher les element d'un module"+resp.filière.nomFilière+"\n    7-Retour\n");										
+											System.out.println("choisir votre prochaine action:\n    1-afficher les classes de la filière"+resp.filière.nomFilière+"\n    2-afficher les étudiants de la filière"+resp.filière.nomFilière+"\n    3-afficher les profs de la filière"+resp.filière.nomFilière+"\n    4-afficher les emplois d'une classe"+resp.filière.nomFilière+"\n    5-afficher les modules d'une classe"+resp.filière.nomFilière+"\n    6-afficher les élément d'un module"+resp.filière.nomFilière+"\n    7-Retour\n");										
 											try {//try 1
 											r2=sc.nextInt();
 											if (r2!=1 && r2!=2 && r2!=3 && r2!=4&& r2!=5 && r2!=6 && r2!=7 ) {
@@ -466,7 +466,7 @@ public class Project {
 									if(r2==2) {//gestion des abscences
 										r2=1;
 										while(r2==1) {//menu de l'abs
-											System.out.println("choisir votre prochaine action:\n    1-Ajouter l'absence\n    2-justifié l'absence\n    3-Retour");
+											System.out.println("choisir votre prochaine action:\n    1-Ajouter l'absence\n    2-justifier l'absence\n    3-Retour");
 											try {
 											r2=sc.nextInt();
 											if (r2!=1 && r2!=2  && r2!=3) {
@@ -501,7 +501,7 @@ public class Project {
 										break;
 									}//retour
 									
-								}//MENU GESTION SCOLARIT2
+								}//MENU GESTION SCOLARITE
 							}//gestion de scolarité
 							
 							if(r1==3) {//retour1
@@ -509,9 +509,9 @@ public class Project {
 							}//retour1
 							
 						}//menu respo
-					}//pwd o existence verifié
+					}//pwd ou existence verifiés
 					
-				}//le SET n'est p vide
+				}//le SET n'est pas vide
 				
 		
 			}//connection responsable de filière
@@ -525,8 +525,8 @@ public class Project {
 				}//existence des prof
 				else {//le SET n'est p vide
 					Prof prof =new Prof (nom, prenom,pwd);
-					if(prof.exist(ecole.profEcole)==false) {//existences du prof connecte
-						System.out.println("Vous n'étes pas inscrit comme un enseignant.");
+					if(prof.exist(ecole.profEcole)==false) {//existence du prof connecte
+						System.out.println("Vous n'êtes pas inscrit comme un enseignant.");
 						id=0;
 					}//existences du prof connecte
 					else if(ecole.profverificationPWD(prof)==false) {//verifi pwd
@@ -569,7 +569,7 @@ public class Project {
 							}//menu Prof
 						
 						
-					}//pwd o existence verifié
+					}//pwd ou existence verifiés
 				}
 			}//connection enseignant
 //---------------------------------------------STUD------------------------------------
@@ -597,7 +597,7 @@ public class Project {
 				}//ecole vide
 				else if(s.exist(ecole.studEcole)==false) {//n'existe pas
 						
-						System.out.println("Vous n'étes pas un étudiant de cette école :\n 1-s'inscrire\n 2-quitter");
+						System.out.println("Vous n'êtes pas un étudiant de cette école :\n 1-s'inscrire\n 2-quitter");
 						try {
 						
 						if(s1!=1 && s1!=2) {

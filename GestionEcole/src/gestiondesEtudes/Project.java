@@ -53,7 +53,7 @@ public class Project {
 			if(id==1) {//connection admin
 				administrateur admin=new administrateur(nom,prenom,pwd,ecole);
 				if (admin.exist(ecole.adminEcole)==false) {//check l'existence du admin
-					System.out.println("vous n'étes pas membre de l'administration\n");
+					System.out.println("vous n'êtes pas membre de l'administration\n");
 					id=0;
 				}//check l'existence du admin
 				else if (admin.verificationPWD()==false) {//check pwd
@@ -63,7 +63,7 @@ public class Project {
 				else {// passwd et l'existence verifié admin
 					int ad1=0;
 					while (ad1==0) {//menu d'administrateur
-						System.out.println("--Choisir votre prochaine action:\n\n    1-Géstion des études\n        2-Les statistiques et rapports\n    3-Retour\n");
+						System.out.println("--Choisir votre prochaine action:\n\n    1-Gestion des études\n        2-Les statistiques et rapports\n    3-Retour\n");
 						try {//try 1
 							ad1=sc.nextInt();	
 							if (ad1!=1 && ad1!=2 && ad1!=3 ) {
@@ -147,7 +147,7 @@ public class Project {
 								}//catch2
 								if (ad2==1) {//stat sur les etudes
 									while(ad2==1){//menu statist d'etudes
-										System.out.println("Choisir votre prochaine action:\n    1-Afficher les filières de l'école\n    2-Afficher les classes d'une filière\n    3-Afficher les heures des modules pour chaque fillière\n    4-Afficher les emploies du temps\n    5-Retour\n");
+										System.out.println("Choisir votre prochaine action:\n    1-Afficher les filières de l'école\n    2-Afficher les classes d'une filière\n    3-Afficher les heures des modules pour chaque filière\n    4-Afficher les emplois du temps\n    5-Retour\n");
 										try {//try 2
 											ad2=sc.nextInt();	
 											if (ad2!=1 && ad2!=2 && ad2!=3 && ad2!=4 && ad2!=5) {
